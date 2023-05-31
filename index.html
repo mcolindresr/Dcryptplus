@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <title>FinalRound</title>
 </head>
 
@@ -13,11 +17,9 @@
     <div class="grid-container">
         <header class="headers"></header>
         <div class="div1">
-            <textarea autofocus rows="9" autocorect="on" class="fake-textarea"
-                placeholder="Escribe el mensaje a encriptar o desencriptar"></textarea>
-            
+            <textarea autofocus rows="9" autocorect="on" class="fake-textarea" placeholder="Escribe el mensaje a encriptar o desencriptar"></textarea>
             <p class="notildes">
-            <img class="imgexlamacion" src="images/bi_exclamation-circle-fill.svg" alt="">&nbsp;Solo letras minúsculas y sin tildes
+                <img class="imgexlamacion" src="images/bi_exclamation-circle-fill.svg" alt="">&nbsp;Solo letras minúsculas y sin tildes
             </p>
             <div class="moverestosputosbotones">
                 <button class="crypt">
@@ -28,10 +30,44 @@
                 </button>
             </div>
         </div>
-        <div class="div2">div2</div>
+        <div class="div2">
+          <img class="muñeco" src="images/Muñeco.svg" alt="">
+          <p class="noencontrado">Ningún mensaje fue encontrado</p>
+          <p class="noencontrado2">Ingresa el texto que desees encriptar o desencriptar.</p>
+          <hr class="linita">
+          <button onclick="copyClipboard('.noencontrado')" class="copy2">
+            <i class="fa-solid fa-copy fa-lg" style="color: #6e80a0;"></i>
+        </button>
+        </div>
+        <script>
+            function copyClipboard(element) {
+                var $bridge = $("<input>")
+                $("body").append($bridge);
+                $bridge.val($(element).text()).select();
+                document.execCommand("copy");
+                $bridge.remove();
+                $(".copy2").attr("title", "Texto copiado al portapapeles");
+            }
+        </script>
+        
+          </div>
+          <footer class="footer-distributed">
+			<div class="footer-right">
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="#"><i class="fa-brands fa-github"></i></a>
+			</div>
+			<div class="footer-left">
+				<p class="footer-links">
+					<a class="link-1" href="#"><img src="images/Logo.svg" alt=""></a>
 
-        <footer class="footers">footer</footer>
-    </div>
+					<p>Developed by: Miguel Alejandro Colindres</p>
+				</p>
+                <p>¡Fullstack developer soon!</p>
+				<p>Styles that inspires &copy; 2023</p>
+			</div>
+		</footer>
+          
 </body>
-
+<script src="script.js"></script>
 </html>
