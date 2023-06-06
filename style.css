@@ -272,9 +272,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-color: red;
-  }
 
   .grid-container {
     display: grid;
@@ -293,8 +290,89 @@ body {
 
   .div2 {
     height:100%;
+    width:100%;
     margin-top: 1%;
-    margin-left: 36%;
+    margin-left: 0.1%;
     position:relative;
   }
+
+  .div2>.noencontrado {
+    margin-top:1%;
+    padding-left:1%;
+    padding-right:1%;
+    text-align: center;
+   
+  }
+
+  .div2>.noencontrado2 {
+    text-align: center;
+    color: #495057;
+  }
+
+  .div2>.copy2 {
+    
+    margin-top: 45px;
+    
+  }
+.div1{
+  font-size: 13px;
+}
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+.div1{
+  font-size: 12px;
+  margin-bottom:40%;
+  max-width: 100%;
+}
+
+.div1>.moverestosputosbotones>.crypt {
+  position: absolute;
+margin-left:1%;
+  width:90%;
+  max-width: 100%;
+}
+
+.div1>.moverestosputosbotones>.descrypt {
+  position: absolute;
+  width:90%;
+  margin-top: 13%;
+  max-width: 100%;
+}
+
+.div1>.notildes {
+  box-sizing: border-box;
+  margin-left: 1%;
+  font-size: 12px;
+  max-width: 100%;
+}
+
+.div1>.fake-textarea {
+  margin-left:4%;
+  width:80%;
+  max-width: 100%;
+}
+.div2{
+ 
+  max-width: 100%;
+}
+.div2>.linita {
+  margin-top: 10%;
+  max-width: 100%;
+}
+
+.div2>.copy2 {
+  
+  margin-bottom: 7%;
+  max-width: 100%;
+}
+
+.headers{
+  margin-left: -10%;
+  max-width: 100%;
+}
 }
